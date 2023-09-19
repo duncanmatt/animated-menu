@@ -25,9 +25,11 @@ const Layout = ({ children }: LayoutProps) => {
       </header>
       <div className={styles.headerControlsWrapper}>
         <span className={styles.headerControls}>
-          <button onClick={toggleMenu} className={styles.menuToggle}>
-            menu
-          </button>
+          <button
+            data-open={`${menuActive}`}
+            onClick={toggleMenu}
+            className={styles.menuToggle}
+          ></button>
         </span>
       </div>
       <NavMenu active={menuActive} />

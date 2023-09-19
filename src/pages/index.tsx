@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Animated Menu Tutorial</title>
+        <title>Animated Menu</title>
         <meta
           name='description'
           content='how to create an immersive navigation menu with css transitions'
