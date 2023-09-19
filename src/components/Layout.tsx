@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import NavMenu from './NavMenu';
-import styles from '../styles/Layout.module.css';
+import Header from './Header';
+import Controls from './Controls';
 import type { LayoutProps } from '@/types';
 
 const Layout = ({ children }: LayoutProps) => {
@@ -14,24 +15,8 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <header className={styles.headerWrapper}>
-        <div className={styles.header}>
-          <div className={styles.headerInner}>
-            <span className={styles.headerLogoWrapper}>
-              <h1 className={styles.headerLogo}>LOGO</h1>
-            </span>
-          </div>
-        </div>
-      </header>
-      <div className={styles.headerControlsWrapper}>
-        <span className={styles.headerControls}>
-          <button
-            data-open={`${menuActive}`}
-            onClick={toggleMenu}
-            className={styles.menuToggle}
-          ></button>
-        </span>
-      </div>
+      <Header />
+      <Controls handleMenu={toggleMenu} menuStatus={menuActive} />
       <NavMenu active={menuActive} />
       <div id='content'>{children}</div>
     </>

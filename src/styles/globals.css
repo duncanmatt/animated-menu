@@ -1,6 +1,4 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
@@ -85,4 +83,122 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  width: 100%;
+  height: 2.845rem;
+}
+
+.header {
+  height: 100%;
+}
+
+.headerInner {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  color: var(--font-color);
+  background-color: #fff;
+}
+
+.headerLogo {
+  font-family: var(--font-mono);
+}
+
+.navMenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-attachment: scroll;
+  background-color: var(--white);
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navMenu[data-active='false'] {
+  pointer-events: none;
+}
+
+.navMenu[data-active='true'] {
+  transform: translateX(0px);
+}
+
+.headerControlsWrapper {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  height: 2.845rem;
+  z-index: 100;
+  pointer-events: all;
+}
+
+.headerControls {
+  position: relative;
+  height: 2.845rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  z-index: 50;
+}
+
+.menuToggle {
+  z-index: 50;
+  color: var(--font-color);
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 10px;
+  border: 0;
+  background: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.menuToggle:before,
+.menuToggle:after {
+  position: absolute;
+  display: block;
+  content: '';
+  background: var(--black);
+  width: 25px;
+  height: 2px;
+  left: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.menuToggle:before {
+  top: 10px;
+}
+
+.menuToggle:after {
+  bottom: 10px;
+}
+
+.menuToggle[data-open='true']:before {
+  top: 14px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menuToggle[data-open='true']:after {
+  bottom: 14px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
