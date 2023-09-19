@@ -1,0 +1,70 @@
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  width: 100%;
+  height: 2.845rem;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+}
+
+.headerInner {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  color: var(--font-color);
+  background-color: #fff;
+}
+
+.navMenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-attachment: scroll;
+  background-color: var(--white);
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navMenu[data-active='false'] {
+  pointer-events: none;
+}
+
+.navMenu[data-active='true'] {
+  transform: translateX(0px);
+}
+
+.headerControlsWrapper {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  height: 2.845rem;
+  z-index: 100;
+  pointer-events: all;
+}
+
+.headerControls {
+  position: relative;
+  height: 2.845rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  z-index: 50;
+}
+
+.menuToggle {
+  z-index: 50;
+  color: var(--font-color);
+}
