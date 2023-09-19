@@ -25,6 +25,10 @@
   background-color: #fff;
 }
 
+.headerLogo {
+  font-family: var(--font-mono);
+}
+
 .navMenu {
   position: absolute;
   left: 0;
