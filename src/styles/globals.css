@@ -102,9 +102,6 @@ a {
 .headerInner {
   display: flex;
   height: 100%;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
   align-items: center;
   padding-inline: 1rem;
   color: var(--font-color);
@@ -120,8 +117,6 @@ a {
   top: 0;
   right: 1rem;
   height: 2.845rem;
-  z-index: 100;
-  pointer-events: all;
 }
 
 .headerControls {
@@ -130,11 +125,10 @@ a {
   display: flex;
   align-items: center;
   height: 100%;
-  z-index: 50;
+  z-index: 10;
 }
 
 .menuToggle {
-  z-index: 50;
   color: var(--font-color);
   position: relative;
   -webkit-appearance: none;
