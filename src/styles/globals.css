@@ -36,23 +36,6 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
-  --font-color: #0b0c0c;
-  --font-color-sec: #505a5f;
-  --link-color: #1d70b8;
-  --link-color-hover: #003078;
-  --link-visited-color: #4c2c92;
-  --border-color: #b1b4b6;
-  --focus-color: #ffdd00;
-  --warning-color: #d4351c;
-  --success-color: #00703c;
-  --blue: #1d70b8;
-  --dark-blue: #003078;
-  --light-blue: #5694ca;
-  --black: #0b0c0c;
-  --dark-grey: #505a5f;
-  --mid-grey: #b1b4b6;
-  --light-grey: #f3f2f1;
-  --white: #fff;
 }
 
 * {
@@ -71,7 +54,7 @@ body {
 }
 
 body {
-  color: rgb(var(--black));
+  color: #0b0c0c;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -104,7 +87,7 @@ a {
   height: 100%;
   align-items: center;
   padding-inline: 1rem;
-  color: var(--font-color);
+  color: #0b0c0c;
   background-color: #fff;
 }
 
@@ -129,7 +112,6 @@ a {
 }
 
 .menuToggle {
-  color: var(--font-color);
   position: relative;
   -webkit-appearance: none;
   appearance: none;
@@ -146,7 +128,7 @@ a {
   position: absolute;
   display: block;
   content: '';
-  background: var(--black);
+  background: #0b0c0c;
   width: 25px;
   height: 2px;
   left: 0;
@@ -183,7 +165,7 @@ a {
   top: 0;
   bottom: 0;
   background-attachment: scroll;
-  background-color: var(--white);
+  background-color: #fff;
   overflow: hidden;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
