@@ -104,7 +104,6 @@ a {
 
 .headerControls {
   position: relative;
-  height: 2.845rem;
   display: flex;
   align-items: center;
   height: 100%;
@@ -131,7 +130,8 @@ a {
   background: #0b0c0c;
   width: 25px;
   height: 2px;
-  left: 0;
+  left: 2px;
+  right: 2px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   -webkit-transform-origin: center center;
