@@ -17,7 +17,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Layout>
-        <main className={`${inter.className}`}></main>
+        <main>{/* PAGE CONTENT */}</main>
       </Layout>
     </>
   );
