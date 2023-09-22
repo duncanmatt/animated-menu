@@ -172,9 +172,9 @@ a {
   z-index: 1;
 }
 
-.navMenu[data-active='false'] {
+/* .navMenu[data-active='false'] {
   pointer-events: none;
-}
+} */
 
 .navMenu[data-active='true'] {
   transform: translateX(0px);
@@ -188,7 +188,7 @@ a {
 }
 
 .navMenuLinks > a {
-  font-family: var(--font-mono);
+  font-family: ui-monospace, monospace;
   font-size: 1.4rem;
   margin-bottom: 24px;
   font-weight: 200;
