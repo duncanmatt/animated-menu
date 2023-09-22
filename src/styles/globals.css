@@ -169,6 +169,7 @@ a {
   overflow: hidden;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .navMenu[data-active='false'] {
