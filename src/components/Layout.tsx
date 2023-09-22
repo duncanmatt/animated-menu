@@ -2,7 +2,10 @@ import { useState } from 'react';
 import NavMenu from './NavMenu';
 import Header from './Header';
 import Controls from './Controls';
-import type { LayoutProps } from '@/types';
+
+type LayoutProps = {
+  children: React.ReactNode;
+};
 
 const Layout = ({ children }: LayoutProps) => {
   const [menuActive, setMenuActive] = useState(false);
@@ -13,11 +16,17 @@ const Layout = ({ children }: LayoutProps) => {
     setMenuActive(!menuActive);
   };
 
+  const resetMenu = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    setMenuActive(false);
+  };
+
   return (
     <>
       <Header />
       <Controls handleMenu={toggleMenu} menuStatus={menuActive} />
-      <NavMenu active={menuActive} />
+      <NavMenu resetMenu={resetMenu} active={menuActive} />
       <div id='content'>{children}</div>
     </>
   );

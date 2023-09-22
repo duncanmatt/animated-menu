@@ -1,5 +1,6 @@
 export type NavMenuStatus = {
   active: boolean; 
+  resetMenu: (event: React.MouseEvent<HTMLAnchorElement> ) => void;
 }
 
 export type LayoutProps = {

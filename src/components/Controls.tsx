@@ -1,4 +1,7 @@
-import type { ControlsProps } from '@/types';
+type ControlsProps = {
+  menuStatus: boolean;
+  handleMenu: (event: React.MouseEvent<HTMLButtonElement>) => void;
+};
 
 const Controls = ({ menuStatus, handleMenu }: ControlsProps) => {
   return (

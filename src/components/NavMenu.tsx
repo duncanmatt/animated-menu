@@ -1,12 +1,21 @@
-import type { NavMenuStatus } from '@/types';
+type NavMenuStatus = {
+  active: boolean;
+  resetMenu: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+};
 
-const NavMenu = ({ active }: NavMenuStatus) => {
+const NavMenu = ({ active, resetMenu }: NavMenuStatus) => {
   return (
     <div data-active={active} className='navMenu'>
       <div className='navMenuLinks'>
-        <a href='https://medium.com'>Link 1</a>
-        <a href='https://medium.com'>Link 2</a>
-        <a href='https://medium.com'>Link 3</a>
+        <a onClick={resetMenu} href='#content'>
+          Link 1
+        </a>
+        <a onClick={resetMenu} href='#content'>
+          Link 2
+        </a>
+        <a onClick={resetMenu} href='#content'>
+          Link 3
+        </a>
       </div>
     </div>
   );
