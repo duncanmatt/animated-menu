@@ -172,10 +172,6 @@ a {
   z-index: 1;
 }
 
-/* .navMenu[data-active='false'] {
-  pointer-events: none;
-} */
-
 .navMenu[data-active='true'] {
   transform: translateX(0px);
 }
@@ -193,8 +189,10 @@ a {
   margin-bottom: 24px;
   font-weight: 200;
   letter-spacing: 0.01em;
+  text-decoration: none;
 }
 
-.navMenuLinks > a:hover {
+.navMenuLinks > a:hover,
+.navMenuLinks > a:active {
   font-weight: 500;
 }
