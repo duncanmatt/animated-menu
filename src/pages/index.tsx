@@ -14,7 +14,11 @@ const Home = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <h1>Attaching layout to page</h1>
+        <div style={{ height: '20rem' }}></div>
+        <h1 style={{ color: '#fff', textAlign: 'center' }}>
+          Attaching layout to page
+        </h1>
+        <div style={{ height: '100vh' }}></div>
       </main>
     </>
   );

@@ -3,18 +3,18 @@ type ControlsProps = {
   handleMenu: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-const Controls = ({ menuStatus, handleMenu }: ControlsProps) => {
+const NavControls = ({ menuStatus, handleMenu }: ControlsProps) => {
   return (
-    <div className='headerControlsWrapper'>
-      <span className='headerControls'>
+    <ul className='navControls'>
+      <li className='navControl'>
         <button
           data-open={`${menuStatus}`}
           onClick={handleMenu}
           className='menuToggle'
         ></button>
-      </span>
-    </div>
+      </li>
+    </ul>
   );
 };
 
-export default Controls;
+export default NavControls;

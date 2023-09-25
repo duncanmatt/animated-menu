@@ -63,60 +63,67 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+main {
+  min-height: 100vh;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
 .headerWrapper {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   bottom: auto;
-  width: 100%;
+  pointer-events: none;
   height: 2.845rem;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .header {
-  height: 100%;
   position: relative;
+  height: 100%;
 }
 
 .headerInner {
   display: flex;
   height: 100%;
   align-items: center;
+  justify-content: space-between;
   padding-inline: 1rem;
   color: #0b0c0c;
-  background-color: #fff;
 }
 
 .headerLogo {
+  position: relative;
+  pointer-events: auto;
+  font-weight: 600;
+  font-size: 1.285rem;
   font-family: var(--font-mono);
 }
 
-.headerControlsWrapper {
-  position: absolute;
-  top: 0;
-  right: 1rem;
-  height: 2.845rem;
-}
-
-.headerControls {
-  position: relative;
+.navControls {
   display: flex;
   align-items: center;
-  height: 100%;
-  z-index: 10;
+  list-style: none;
+}
+
+.navControl {
+  z-index: 3;
+  position: relative;
+  pointer-events: auto;
+  text-decoration: none;
 }
 
 .menuToggle {
   position: relative;
-  -webkit-appearance: none;
   appearance: none;
-  padding: 10px;
-  border: 0;
+  padding: 0;
+  border: none;
   background: none;
   width: 30px;
   height: 30px;
@@ -160,21 +167,24 @@ a {
 }
 
 .navMenu {
-  position: absolute;
+  pointer-events: auto;
+  position: fixed;
   left: 0;
-  right: 0;
   top: 0;
   bottom: 0;
-  background-attachment: scroll;
+  right: 0;
   background-color: #fff;
-  overflow: hidden;
-  transform: translateX(100%);
+  overflow: auto;
   transition: transform 0.3s ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navMenu[data-active='true'] {
   transform: translateX(0px);
+}
+
+.navMenu[data-active='false'] {
+  transform: translateX(100%);
 }
 
 .navMenuLinks {

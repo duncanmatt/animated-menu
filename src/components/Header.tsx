@@ -1,16 +1,35 @@
+import { useState } from 'react';
+import NavMenu from './NavMenu';
+import Controls from './Controls';
+import Link from 'next/link';
+
 const Header = () => {
+  const [menuActive, setMenuActive] = useState(false);
+
+  const toggleMenu = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    setMenuActive(!menuActive);
+  };
+
+  const resetMenu = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    setMenuActive(false);
+  };
+
   return (
-    <div className='headerWrapper'>
+    <nav className='headerWrapper'>
       <header className='header'>
         <div className='headerInner'>
-          <span className='headerLogoWrapper'>
-            <a href='#content'>
-              <h1 className='headerLogo'>LOGO</h1>
-            </a>
-          </span>
+          <Link href='/' className='logo'>
+            <span className='headerLogo'>LOGO</span>
+          </Link>
+          <Controls handleMenu={toggleMenu} menuStatus={menuActive} />
         </div>
       </header>
-    </div>
+      <NavMenu active={menuActive} resetMenu={resetMenu} />
+    </nav>
   );
 };
 

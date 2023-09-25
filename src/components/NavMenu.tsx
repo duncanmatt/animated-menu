@@ -5,7 +5,7 @@ type NavMenuStatus = {
 
 const NavMenu = ({ active, resetMenu }: NavMenuStatus) => {
   return (
-    <div data-active={active} className='navMenu'>
+    <nav data-active={active} className='navMenu'>
       <div className='navMenuLinks'>
         <a onClick={resetMenu} href='#content'>
           Link 1
@@ -17,7 +17,7 @@ const NavMenu = ({ active, resetMenu }: NavMenuStatus) => {
           Link 3
         </a>
       </div>
-    </div>
+    </nav>
   );
 };
 

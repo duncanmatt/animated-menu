@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   const pageContent = getLayout(<Component {...pageProps} />);
 
-  return pageContent;
+  return <>{pageContent}</>;
 };
 
 export default App;
