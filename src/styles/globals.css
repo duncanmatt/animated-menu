@@ -174,7 +174,8 @@ a {
   height: 100%;
   width: 100vw;
   background-color: #fff;
-  /* overflow: hidden; */
+  overflow: auto;
+  overflow-x: hidden;
   transition: transform 0.3s ease-in-out;
   z-index: 2;
 }
