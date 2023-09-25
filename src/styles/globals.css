@@ -46,11 +46,7 @@
 
 html,
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
+  position: relative;
 }
 
 body {
@@ -61,11 +57,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  min-height: calc(1vh * 100);
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
-main {
+/* main {
   min-height: 100vh;
-}
+} */
 
 a {
   color: inherit;
@@ -73,7 +74,7 @@ a {
 }
 
 .headerWrapper {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -85,7 +86,7 @@ a {
 }
 
 .header {
-  position: relative;
+  /* position: relative; */
   height: 100%;
 }
 
@@ -114,7 +115,7 @@ a {
 
 .navControl {
   z-index: 3;
-  position: relative;
+  /* position: relative; */
   pointer-events: auto;
   text-decoration: none;
 }
@@ -168,15 +169,23 @@ a {
 
 .navMenu {
   pointer-events: auto;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  position: relative;
+  /* left: 0; */
+  /* bottom: 0; */
+  /* right: 0; */
+  height: 100vh;
+  width: 100vw;
   background-color: #fff;
-  overflow: auto;
+  /* overflow: hidden; */
   transition: transform 0.3s ease-in-out;
   z-index: 2;
+}
+
+.navMenuInner {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .navMenu[data-active='true'] {
@@ -194,16 +203,20 @@ a {
   flex-direction: column;
 }
 
-.navMenuLinks > a {
+.navMenuLinks > li {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.navMenuLinks > li > a {
   font-family: ui-monospace, monospace;
   font-size: 1.4rem;
-  margin-bottom: 24px;
   font-weight: 200;
   letter-spacing: 0.01em;
   text-decoration: none;
 }
 
-.navMenuLinks > a:hover,
-.navMenuLinks > a:active {
+.navMenuLinks > li > a:hover,
+.navMenuLinks > li > a:active {
   font-weight: 500;
 }

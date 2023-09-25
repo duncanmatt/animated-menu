@@ -6,16 +6,24 @@ type NavMenuStatus = {
 const NavMenu = ({ active, resetMenu }: NavMenuStatus) => {
   return (
     <nav data-active={active} className='navMenu'>
-      <div className='navMenuLinks'>
-        <a onClick={resetMenu} href='#content'>
-          Link 1
-        </a>
-        <a onClick={resetMenu} href='#content'>
-          Link 2
-        </a>
-        <a onClick={resetMenu} href='#content'>
-          Link 3
-        </a>
+      <div className='navMenuInner'>
+        <ul className='navMenuLinks'>
+          <li>
+            <a onClick={resetMenu} href='#content'>
+              Link 1
+            </a>
+          </li>
+          <li>
+            <a onClick={resetMenu} href='#content'>
+              Link 2
+            </a>
+          </li>
+          <li>
+            <a onClick={resetMenu} href='#content'>
+              Link 3
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );
