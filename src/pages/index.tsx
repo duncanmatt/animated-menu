@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout from '@/components/Layout';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -13,9 +13,15 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Layout>
-        <main>{/* PAGE CONTENT */}</main>
-      </Layout>
+      <main>
+        <h1>Attaching layout to page</h1>
+      </main>
     </>
   );
-}
+};
+
+Home.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Home;
