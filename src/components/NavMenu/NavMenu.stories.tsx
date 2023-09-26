@@ -18,3 +18,12 @@ export const Default: Story = {
     },
   },
 };
+
+export const Open: Story = {
+  args: {
+    active: true,
+    resetMenu(event) {
+      this.active = !this.active;
+    },
+  },
+};
