@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import NavMenu from './NavMenu';
-import Controls from './Controls';
+import NavMenu from '../NavMenu/NavMenu';
+import Controls from '../Controls';
 import Link from 'next/link';
 
 const Header = () => {
