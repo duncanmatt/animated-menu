@@ -9,7 +9,6 @@ module.exports = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-styling-webpack",
-    "@storybook/addon-mdx-gfm"
   ],
   framework: '@storybook/nextjs',
   docs: {
