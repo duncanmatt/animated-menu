@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
 import NavMenu from './NavMenu';
-import { NavMenuStatus } from '@/types';
 
 const meta: Meta<typeof NavMenu> = {
   title: 'components/NavMenu/NavMenu',
@@ -10,20 +9,22 @@ const meta: Meta<typeof NavMenu> = {
 export default meta;
 type Story = StoryObj<typeof NavMenu>;
 
-export const Default: Story = {
+export const Default: Story = { tags: ['autodocs'] };
+
+export const Hidden: Story = {
   args: {
     active: false,
     resetMenu(event) {
-      this.active = !this.active;
+      this.active = false;
     },
   },
 };
 
-export const Open: Story = {
+export const Shown: Story = {
   args: {
     active: true,
     resetMenu(event) {
-      this.active = !this.active;
+      this.active = false;
     },
   },
 };

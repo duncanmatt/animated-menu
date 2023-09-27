@@ -115,7 +115,6 @@ a {
 
 .navControl {
   z-index: 3;
-  /* position: relative; */
   pointer-events: auto;
   text-decoration: none;
 }
@@ -218,4 +217,9 @@ a {
 .navMenuLinks > li > a:hover,
 .navMenuLinks > li > a:active {
   font-weight: 500;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
 }

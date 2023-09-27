@@ -3,7 +3,7 @@ type ControlsProps = {
   handleMenu: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-const NavControls = ({ menuStatus, handleMenu }: ControlsProps) => {
+const Controls = ({ menuStatus, handleMenu }: ControlsProps) => {
   return (
     <ul className='navControls'>
       <li className='navControl'>
@@ -18,4 +18,4 @@ const NavControls = ({ menuStatus, handleMenu }: ControlsProps) => {
   );
 };
 
-export default NavControls;
+export default Controls;

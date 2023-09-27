@@ -1,6 +1,6 @@
 
 import '../src/styles/globals.css';
-import {Preview} from '@storybook/react'
+import {Preview} from '@storybook/react';
 
 export const preview:Preview = {
   parameters: {
