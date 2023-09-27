@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 type NavMenuStatus = {
   active: boolean;
   resetMenu: (event: React.MouseEvent<HTMLAnchorElement>) => void;
@@ -9,19 +11,19 @@ const NavMenu = ({ active, resetMenu }: NavMenuStatus) => {
       <div className='navMenuInner'>
         <ul className='navMenuLinks'>
           <li>
-            <a onClick={resetMenu} href='#content'>
+            <Link onClick={resetMenu} href='/'>
               Link 1
-            </a>
+            </Link>
           </li>
           <li>
-            <a onClick={resetMenu} href='#content'>
+            <Link onClick={resetMenu} href='/'>
               Link 2
-            </a>
+            </Link>
           </li>
           <li>
-            <a onClick={resetMenu} href='#content'>
+            <Link onClick={resetMenu} href='/'>
               Link 3
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
