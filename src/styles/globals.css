@@ -171,11 +171,11 @@ a {
   position: fixed;
   top: 0;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
   overflow: auto;
   overflow-x: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
   z-index: 2;
 }
 
@@ -187,11 +187,11 @@ a {
 }
 
 .navMenu[data-active='true'] {
-  transform: translateX(0px);
+  left: 0;
 }
 
 .navMenu[data-active='false'] {
-  transform: translateX(100%);
+  left: 100%;
 }
 
 .navMenuLinks {

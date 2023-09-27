@@ -10,12 +10,10 @@ export default meta;
 type Story = StoryObj<typeof NavMenu>;
 
 export const Default: Story = {
-  parameters: { chromatic: { pauseAnimationAtEnd: true } },
   tags: ['autodocs'],
 };
 
 export const Hidden: Story = {
-  parameters: { chromatic: { pauseAnimationAtEnd: true } },
   args: {
     active: false,
     resetMenu(event) {
@@ -25,7 +23,6 @@ export const Hidden: Story = {
 };
 
 export const Shown: Story = {
-  parameters: { chromatic: { pauseAnimationAtEnd: true } },
   args: {
     active: true,
     resetMenu(event) {
