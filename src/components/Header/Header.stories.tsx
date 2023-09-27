@@ -14,6 +14,7 @@ type Story = StoryObj<typeof Header>;
 export const Default: Story = { tags: ['autodocs'] };
 
 export const ShowNav: Story = {
+  parameters: { chromatic: { pauseAnimationAtEnd: true } },
   tags: ['autodocs'],
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -21,7 +22,7 @@ export const ShowNav: Story = {
     const menuToggle = canvas.getByRole('button');
 
     await userEvent.click(menuToggle, {
-      delay: 300,
+      delay: 100,
     });
 
     await userEvent.click(menuToggle, {
