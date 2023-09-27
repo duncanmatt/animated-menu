@@ -13,15 +13,6 @@ export const Default: Story = {
   tags: ['autodocs'],
 };
 
-export const Hidden: Story = {
-  args: {
-    active: false,
-    resetMenu(event) {
-      this.active = false;
-    },
-  },
-};
-
 export const Shown: Story = {
   args: {
     active: true,
