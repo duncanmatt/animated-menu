@@ -9,7 +9,8 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "chromatic": "npx chromatic --project-token=chpt_2174c516e2b326e"
   },
   "dependencies": {
     "@types/node": "20.6.2",
@@ -36,5 +37,7 @@
     "chromatic": "^7.2.0",
     "eslint-plugin-storybook": "^0.6.14",
     "storybook": "^7.4.5"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "animated_menu_tutorial@0.1.0"
 }
