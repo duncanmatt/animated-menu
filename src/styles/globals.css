@@ -78,7 +78,7 @@ a {
   pointer-events: none;
   height: 2.845rem;
   background-color: #f6f6f6;
-  z-index: 2;
+  z-index: 1;
 }
 
 .header {
@@ -172,10 +172,6 @@ a {
   overflow-x: hidden;
   transition: left 0.3s ease-in-out;
   z-index: 2;
-}
-
-.navMenuInner {
-  position: relative;
 }
 
 .navMenu[data-active='true'] {
