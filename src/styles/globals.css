@@ -117,7 +117,7 @@ a {
 .menuToggle {
   position: relative;
   appearance: none;
-  padding: 0;
+  padding: 10px;
   border: none;
   background: none;
   width: 30px;
