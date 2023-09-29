@@ -95,7 +95,6 @@ a {
 }
 
 .headerLogo {
-  position: relative;
   pointer-events: auto;
   font-weight: 600;
   font-size: 1.285rem;
