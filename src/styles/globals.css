@@ -46,6 +46,7 @@
 
 html,
 body {
+  overscroll-behavior: none;
   position: relative;
 }
 
@@ -57,11 +58,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  min-height: calc(1vh * 100);
-  height: auto;
+
   overflow-y: scroll;
   overflow-x: hidden;
-  overscroll-behavior: none;
 }
 
 a {

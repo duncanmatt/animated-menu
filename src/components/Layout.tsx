@@ -8,8 +8,8 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      <div>{children}</div>
-      <footer>Footer</footer>
+      <main id='content'>{children}</main>
+      <footer>{/* FOOTER CONTENT */}</footer>
     </>
   );
 };

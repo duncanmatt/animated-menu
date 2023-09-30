@@ -8,7 +8,6 @@ const Controls = ({ menuStatus, handleMenu }: ControlsProps) => {
     <ul className='navControls'>
       <li className='navControl'>
         <button
-          role='button'
           data-open={`${menuStatus}`}
           onClick={handleMenu}
           className='menuToggle'

@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 const Page = () => {
   return (
     <>
-      <div>PAGE CONTENT</div>
+      <div>{/* PAGE CONTENT */}</div>
     </>
   );
 };
