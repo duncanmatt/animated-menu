@@ -6,11 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "test-storybook": "test-storybook",
-    "chromatic": "npx chromatic --project-token=chpt_2174c516e2b326e"
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "20.6.2",
@@ -22,22 +18,5 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.2.2"
-  },
-  "devDependencies": {
-    "@storybook/addon-essentials": "^7.4.5",
-    "@storybook/addon-interactions": "^7.4.5",
-    "@storybook/addon-links": "^7.4.5",
-    "@storybook/addon-onboarding": "^1.0.8",
-    "@storybook/addon-styling-webpack": "^0.0.4",
-    "@storybook/blocks": "^7.4.5",
-    "@storybook/nextjs": "^7.4.5",
-    "@storybook/react": "^7.4.5",
-    "@storybook/test-runner": "^0.13.0",
-    "@storybook/testing-library": "^0.2.1",
-    "chromatic": "^7.2.0",
-    "eslint-plugin-storybook": "^0.6.14",
-    "storybook": "^7.4.5"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "animated_menu_tutorial@0.1.0"
+  }
 }
